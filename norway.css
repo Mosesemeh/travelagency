@@ -1,0 +1,25 @@
+body{
+    font-family: sans-serif;
+}
+header nav{
+    display: inline-block;
+}
+header a.logo{
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: -3px;
+}
+header nav a{
+    text-decoration: none;
+    padding: 3px 5px;
+    margin: 0 10px;
+}
+header nav a.active{
+    border-bottom: 2px solid blue;
+}
+header nav a.red{
+    background-color: #D83848;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
