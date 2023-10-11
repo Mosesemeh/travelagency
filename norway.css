@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 header nav{
     display: inline-block;
+}
+header a{
+    text-decoration: none;
 }
 header a.logo{
     text-decoration: none;
@@ -22,4 +27,8 @@ header nav a.red{
     color: #fff;
     border-radius: 5px;
     padding: 5px 15px;
+}
+header svg{
+    height: 20px;
+     
 }
