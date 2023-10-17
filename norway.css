@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
 :root{
     --pink: #D83848;
 }
@@ -128,35 +131,38 @@ div.social-links{
     margin-top: 30px;
 }
 div.social-links svg{
-    height: 20px;
+    height: 20px; 
     display: inline-block;
     margin: 10px;
     fill: rgba(255, 255, 255, 0.7);
 }
+.second-img{
+    background: url(photo/nm13.webp) top center no-repeat;
+    background-size: 120%;
+}
 div.tours{
-    background-image: url(photo/nm13.webp);
-    background-size: cover;
+    
 }
 div.white-overlay{
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 div.tours-head{
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 50px 0;
     display: grid;  
     align-items: center;
     grid-template-columns: min-content 1fr max-content;
-    gap: 30px;
+    gap: 10px;
 }
 h2{
     text-transform: uppercase;
-    font-family: 'Bebas Neue', sans-serif;
-    color: rgba(0, 0, 0, 0.1);
-    font-size: 5rem;
+    font-family: 'Oswald', sans-serif;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 4.5rem;
 }
 div.tours-head p{
-    margin-right: 50px;
+    margin-right: 20px;
     font-size: .7rem;
     color: rgba(0, 0, 0, 0.5);
 }
@@ -182,16 +188,18 @@ nav.tabs a.active{
     overscroll-behavior-x: contain;
     gap: 20px;
     scroll-snap-type: x mandatory;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     padding-bottom: 20px;
 }
 .tour-body a{
     scroll-snap-align: start;
     display: block;
-    width: 150px;
+    width: 180px;
     height: 250px;
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
 .tour-body a div.background{
     position: absolute;
@@ -199,6 +207,15 @@ nav.tabs a.active{
     bottom: 0;
     left: 0;
     right: 0;
+} 
+.tour-body a span{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: .8rem;
+    text-align: center;
 }
 .tour-body a div.background img{
     width: 100%;
@@ -206,5 +223,49 @@ nav.tabs a.active{
     object-fit: cover;
 }
 div.tours div.white-overlay{
-    padding-bottom: 100px;
+   /* padding-bottom: 100px;*/
+}
+section.about div.columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    left: 0;
+    right: 0;
+    padding: 0 50px;
+    align-items: center;
+    margin: 0 auto;
+}
+section.about div.columns{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+div.video-outer{
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+section.about button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px; 
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+}
+section.about button svg{
+    width: 50px;
+    fill: rgba(255, 255, 255, 0.7);
+}
+.white-box{
+    background-color: #fff;
+    padding: 20px;
 }
