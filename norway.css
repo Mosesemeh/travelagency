@@ -2,16 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root{
+    --pink: #D83848;
+}
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
 }
 body{
     font-family: 'Roboto', sans-serif;
 }
 header{
-    position: absolute;
-    width: 100%;
+    position: absolute; 
+    width: 100%; 
+    padding: 5px 20px;
 }
 header nav{
     display: inline-flex;
@@ -34,7 +42,7 @@ header nav a.active{
     border-bottom: 2px solid #fff;
 }
 header nav a.red{
-    background-color: #D83848;
+    background-color: var(--pink);
     color: #fff;
     border-radius: 5px;
     padding: 5px 15px;
@@ -59,8 +67,8 @@ header div.columns div:nth-child(2) a:last-child{
     top: -3px;
 }
 div.intro{
-    padding: 300px 50px 150px;
-    background: url(photo/nm8.avif) center center;
+    padding: 300px 50px 0;
+    background: url(photo/nm8.avif) center center no-repeat;
     background-size: cover;
 }
 div.intro nav{
@@ -72,26 +80,131 @@ div.intro nav a{
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-family: 'Bebas Neue', sans-serif;
     line-height: 1.2rem;
     transition: all 0.3s ease;
 }
 div.intro nav a time{
-    display: block;
+    display: inline-block;
     font-size: 0.8rem;
-    text-align: center;
+    transition: all 0.3s ease;
 }
-div.intro nav a:hover{
+div.intro nav a span{
+    transition: all 0.3s ease;
+    font-size: 0rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: initial;
+    position: relative;
+    top: -6px;
+} 
+div.intro nav a:hover,
+div.intro nav a.active
+{
     color: #fff;
     font-size: 5rem;
     line-height: 2.3rem;
+}
+div.intro nav a:hover time,
+div.intro nav a.active time
+{
+    font-size: 2rem;
+}
+div.intro nav a:hover span,
+div.intro nav a.active span
+{
+    font-size: 1rem;
 }
 div.intro span.line{
     min-width: 20px;
     width: 100%;
     height: 2px;
     margin: 0 10px 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.3);
     display: inline-block;
 } 
+div.social-links{
+    text-align: right;
+    margin-top: 30px;
+}
+div.social-links svg{
+    height: 20px;
+    display: inline-block;
+    margin: 10px;
+    fill: rgba(255, 255, 255, 0.7);
+}
+div.tours{
+    background-image: url(photo/nm13.webp);
+    background-size: cover;
+}
+div.white-overlay{
+    background-color: rgba(255, 255, 255, 0.95);
+}
+div.tours-head{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: grid;  
+    align-items: center;
+    grid-template-columns: min-content 1fr max-content;
+    gap: 30px;
+}
+h2{
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 5rem;
+}
+div.tours-head p{
+    margin-right: 50px;
+    font-size: .7rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+nav.tabs{
+    display: flex;
+}
+nav.tabs a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .7rem;
+    padding: 2px 6px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+} 
+nav.tabs a.active{
+    color: var(--pink);
+    border-color: var(--pink);
+}
+.tour-body{
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.tour-body a{
+    scroll-snap-align: start;
+    display: block;
+    width: 150px;
+    height: 250px;
+    position: relative;
+}
+.tour-body a div.background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.tour-body a div.background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.tours div.white-overlay{
+    padding-bottom: 100px;
+}
