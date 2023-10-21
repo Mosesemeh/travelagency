@@ -260,8 +260,9 @@ h2{
     font-size: 6.5rem;
 }  
 @media screen and (max-width: 700px){
-    h2{
+    div.tours-head h2{
         font-size: 4rem;
+        padding-top: 10px;
     }
 }
 div.tours-head p{
