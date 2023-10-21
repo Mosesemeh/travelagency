@@ -250,7 +250,7 @@ div.tours-head{
     div.tours-head{
         grid-template-columns: 1fr;
         gap: 15px;
-        padding: 0 20px 20px;
+        padding: 20px 20px 20px;
     }
 }
 h2{
@@ -260,9 +260,8 @@ h2{
     font-size: 6.5rem;
 }  
 @media screen and (max-width: 700px){
-    div.tours-head h2{
+    h2{
         font-size: 4rem;
-        padding-top: 10px;
     }
 }
 div.tours-head p{
